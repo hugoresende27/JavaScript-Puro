@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM 3</title>
+    <style>
+        img{
+            margin: 20px;
+            width: 200px;
+            height: auto;
+        }
+ 
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+         
+        <button type="button" onclick="teste()">Ação</button>
+
+        <div>       <!-- posso usar onclick e chamar a função usando a imagem como objeto do clique-->
+            <img id= 'imgA' onclick="teste()" src="https://cdn.pixabay.com/photo/2015/03/26/09/41/chain-690088_960_720.jpg" alt="image">
+        </div>
+
+        <p id = 'info'></p>
+
+        <div id="div1">
+            <img src="https://w7.pngwing.com/pngs/38/204/png-transparent-computer-icons-check-mark-true-or-false-miscellaneous-company-logo.png" alt="verdade">
+            <img src="https://w7.pngwing.com/pngs/38/204/png-transparent-computer-icons-check-mark-true-or-false-miscellaneous-company-logo.png" alt="verdade">
+        </div>
+       
+        <div id= 'div2'>
+            <img src="https://w7.pngwing.com/pngs/568/635/png-transparent-graphy-postage-stamps-rubber-stamp-fake-shemp-text-rectangle-logo.png" alt="fake">
+            <img src="https://w7.pngwing.com/pngs/568/635/png-transparent-graphy-postage-stamps-rubber-stamp-fake-shemp-text-rectangle-logo.png" alt="fake">
+            <img src="https://w7.pngwing.com/pngs/568/635/png-transparent-graphy-postage-stamps-rubber-stamp-fake-shemp-text-rectangle-logo.png" alt="fake">
+        </div>
+</body>
+</html>
