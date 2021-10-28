@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let numeros = [10,20,30,40,50];
+
+        console.log("Comprimento::"+numeros.length);
+        console.log(numeros.length);        //imprime o comprimento do array na consola
+        console.log(numeros[1]);
+        numeros[0]=999;
+        console.log(numeros[0]);
+        
+        numeros.pop();              //remove o ultimo elemento do array
+        numeros.shift();            //remove o primeiro elemento do array
+        numeros.unshift(69);        //insere na posição 0 do array
+        numeros.push(555);          //insere na ultima posição do array
+
+        //numeros.splice(1,3);        //remove os elementos 1 a 3, posição 1 e nr.de elementos a eliminar 3
+        numeros.splice(2,1,300);        //elimina o 30, na posição 2, e coloca 300
+        for (let i=0; i<numeros.length;i++)
+        {
+            console.log("-> "+numeros[i]);
+        }
+
+    </script>
+    <title>Aula 1</title>
+</head>
+<body>
+    
+</body>
+</html>

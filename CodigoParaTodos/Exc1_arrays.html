@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios 1</title>
+    <script>
+
+        let auto=["BMW","Audi","Mercedes","Citroen","Renault","Seat","Saab","Volvo","Opel","Porshe"];
+        auto.push("Ferrari","Honda","Scania");      //adicionar 3 novas marcas no final do array
+        auto.splice(0,2);                           //remover as 2 primeiras marcas do array
+        auto.splice(4,0,"MAN","Iveco","Lamborgini") //adicionar 3 elementos na posição 4 do array
+        auto.splice(7,2);                           //elimina 2 elementos na posição 7
+        for (let i=0;i<auto.length;i++)
+        {
+            console.log(auto[i]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
