@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio args função media</title>
+    <script>
+        function medias(nome,num, ...args)
+        {
+            let soma=0;
+            let media=0;
+            for (let i=0; i<args.length;i++)
+            {
+                soma+=args[i];
+            }
+            media= soma/args.length;
+            console.log ("Aluno::"+nome+"\nNum::"+num);
+            return media;
+        }
+        console.log(medias("Hugo",27,12,15,18));
+        console.log(medias("Rita",3 , 15,20));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

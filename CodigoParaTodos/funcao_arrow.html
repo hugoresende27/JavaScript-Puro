@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Arrow</title>
+    <script>
+        function multiplicar(x,y)       //FUNÇÃO NORMAL
+        {
+            return x*y;
+        }
+
+        let a = function (x,y){return x*y}; //FUNÇÃO ATRIBUIDA A VAR a, sem nome
+        let b = a(6,3);                     //posso usar o nome da var (a) para chamar a função
+        console.log(b);
+
+        let c = multiplicar(6,3);
+        console.log(c);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function retSe(a,b)
+        {
+            if ((a+b)>15)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        console.log(retSe(10,5));
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+        let z = function (a,b) {return  (a+b)>15 ? true : false };
+        console.log(z(10,10));
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//FUNÇÕES ARROW     let função = (arg1,arg2, ...argN) => expressão
+
+        let dividir = (a,b) => a/b;         //função com 2 parametros, return a/b
+        let triplo = a => a*3;              //funçao com 1 parametro
+        let cumprimentar = () => console.log("Olá");//função que não recebe parametros
+        let encontrarMaximo = (a,b) =>
+        {
+            if (a>b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
+        }
+        console.log(dividir(100,5));
+        console.log(triplo(10));
+        cumprimentar();
+        console.log(encontrarMaximo(20,5));
+        console.log(encontrarMaximo(20,500));
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+        let tresEle = (a,b,c) => 
+        {
+            if ((a>b) && (a>c))
+                return a;
+            else 
+            {
+                if ((b>a) && (b>c))
+                    return b;
+                else
+                    return c;
+            }
+        }
+        console.log(tresEle(1,5,9));
+        console.log(tresEle(11,5,9));
+        console.log(tresEle(1,55,9));
+        console.log(tresEle(9,55,9));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
