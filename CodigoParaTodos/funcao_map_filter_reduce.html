@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcao map filter reduce JS</title>
+    <script>
+        const nomes = ["Jorge","Rui","Anabela","Bruno"];
+        const idade = [25,25,25,25];
+
+        const alunos = [                    //ARRAY DE OBJETOS
+        {  nome:"Hugo" , num:27 , curso:"Js" , ano:1 },
+        {  nome:"Rita" , num:20 , curso:"php" , ano:6 },
+        {  nome:"Zecas" , num:7 , curso:"python" , ano:4 },
+        {  nome:"pedro" , num:17 , curso:"ingles" , ano:2 },
+        {  nome:"Calos" , num:2 , curso:"c++" , ano:1 }
+        ];
+//////////////////////////   MAP    ///////////////////////////////////////////
+        console.log(idade.map(a => a*3));     //multiplica todos os valores de idade por *3
+        console.log(alunos.map ( a => a.nome));     //devolve todos os nomes em alunos
+
+//////////////////////////   FILTER    ///////////////////////////////////////////
+        console.log(idade.filter (a => a>20 && a<40));      //devolve as idades entre 20 e 40
+        console.log(alunos.filter (a => a.ano == 1));       //devolve todos os alunos em que ano == 1
+
+//////////////////////////   REDUCE    ///////////////////////////////////////////
+        console.log(idade.reduce((total,idade)=> total + idade, 0));    //devolve a soma do array idade, valor inicial 0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
