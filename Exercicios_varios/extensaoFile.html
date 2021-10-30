@@ -7,7 +7,13 @@
     <title>Exc2 Filename JS</title>
     <script>
         const getFileExt = (str) => str.slice(str.lastIndexOf('.'));
-
+        const getFileExt2 = (str) => str.slice(str.indexOf('.'));
+        const inclui = (str) => str.slice(str.includes('index'));
+        console.log(getFileExt("index.html"));
+        console.log(getFileExt("index.js"));
+        console.log(getFileExt("index.css.config"));
+        console.log(getFileExt2("index.css.config"));
+        console.log(inclui("css"));
     </script>
 </head>
 <body>
