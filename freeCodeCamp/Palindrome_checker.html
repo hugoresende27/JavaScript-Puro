@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome checker</title>
+    <script>
+        function palin(str)
+        {
+            for (let i=0; i<str.length ; i++)
+            {
+                for (let j=0; j<str.length; j++)
+                {
+                    if (str[i]===str[j])
+                    {
+                        return "Palindrome!";
+                    }
+                    else
+                    {
+                        return "NÂO é Palindrome!";
+                    }
+                }
+            }
+        }
+       console.log( palin("coco") );
+       console.log( palin("cococ") );
+//////////////////////////////////////////////
+        const pal = str =>  ((str.toLowerCase()).replace(/ /g,'')).replace(/./g,'') === (((str.split('').reverse().join('')).toLowerCase()).replace(/ /g,'')).replace(/./g,'') ;// ? true : false;
+        console.log("hugo "+pal("hugo"));
+        console.log("coco "+pal("coco"));
+        console.log("radar "+pal("radar"));
+        console.log("racecar "+pal("racecar"));
+        console.log("race car "+pal("race car"));
+        console.log("eye "+pal("eye"));
+        console.log("A man, a plan, a canal. Panama "+pal("A man, a plan, a canal. Panama"));
+        console.log("never odd or even "+pal("never odd or even"));
+        console.log("almostomla "+pal("almostomla"));
+        console.log("My age is 0, 0 si ega ym "+pal("My age is 0, 0 si ega ym"));
+        console.log("#############");
+////////////////////////////////////////////
+       const pal2 = str => {
+            
+            let x = str.replace(/[^A-Za-z0-9]/g , ''); //[^A-Za-z0-9] remove tudo o que não esteja compreendido entre A-Za-z0-9
+            x = x.toUpperCase();                        //tudo em MAIUSCULA
+            for (let i=0; i<x.length - 1/2; i++)        //ciclo até metade da string, comprimento menos metade
+            {
+                if (x[i] !== x[x.length - i-1])     //se string na posicao i for diferente de string na posição comprimento-1(lenght - i -1 vais percorrer a string do final até a metade do principio)
+                {
+                    return false;       //se diferente devolve falso
+                }
+            } 
+            return true;          
+       }
+       
+        console.log("hugo "+pal2("hugo"));
+        console.log("coco "+pal2("coco"));
+        console.log("radar "+pal2("radar"));
+        console.log("racecar "+pal2("racecar"));
+        console.log("race car "+pal2("race car"));
+        console.log("eye "+pal2("eye"));
+        console.log("A man, a plan, a canal. Panama "+pal2("A man, a plan, a canal. Panama"));
+        console.log("never odd or even "+pal2("never odd or even"));
+        console.log("almostomla "+pal2("almostomla"));
+        console.log("My age is 0, 0 si ega ym "+pal2("My age is 0, 0 si ega ym"));
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
