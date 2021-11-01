@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Array</title>
+    <script>
+        var arr = [666,6, 89, 3, 45,199];
+        var maximus = Math.max.apply(null, arr);
+        const maximus2 = Math.max(...arr);
+        console.log(maximus);
+        console.log(maximus2);
+//////////////////////////////////////////////copiar um array para outro
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // usando ...
+
+console.log(arr2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parse</title>
+    <script>
+        const a = parseInt("007");
+        console.log(a);
+        function convertToInteger(str) {
+            return parseInt(str);
+        }
+        function convertToString(int) {
+            return int.toString(2);
+        }
+        
+        console.log(convertToInteger("56"));
+        console.log(convertToInteger("0"));
+        console.log(convertToString(a));
+        console.log(convertToString(5));
+        console.log(convertToString(0));
+
+        function convertToInteger(str) {
+            return parseInt(str,2); //binary number ,2
+        }
+        
+        console.log(convertToInteger("10011"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
