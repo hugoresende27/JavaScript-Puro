@@ -22,16 +22,47 @@
            }
            (a===b) ? res2.innerHTML="IGUAL" : res2.innerHTML="DIFERENTE"
         }     
+        function verifica0()
+        {
+            const x = document.getElementById('txt').value
+            const r = document.getElementById('sol')
+            return (x>0) ?  r.innerHTML ="Maior do que 0" : (x<0) ? r.innerHTML="Menor do que 0" : r.innerHTML="Igual a 0"
+            /*
+            if (x>0)
+            {
+                r.innerHTML ="Maior q 0"
+            }
+            else 
+            {
+                if (x<0)
+                    {
+                        r.innerHTML ="Menor q 0"
+                    }
+                else
+                    {
+                        r.innerHTML =" É 0 !"
+                    }
+            }
+            */
+
+        }
     </script>
  
 </head>
 <body>
     <div>
-        <p id="res">TESTE</p>
-        <p id="resB">TESTE</p>
+      
         <button type="button" onclick="verificaIgual()">Clica</button>
         <input type="number" id="num1">
         <input type="number" id="num2">
+        <p id="res">TESTE</p>
+        <p id="resB">TESTE</p>
+    </div>
+    <div>
+        
+        <button type="button" onclick="verifica0()">Maior menor ou 0</button>
+        <input type="number" id="txt">
+        <p id="sol">RES</p>
     </div>
 
  
