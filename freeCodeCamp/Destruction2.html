@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+        var voxel = { x: 3.6, 
+                      y: 7.4,
+                      z: 6.54};
+        var x = voxel.x;
+        var y = voxel.y;
+        var z = voxel.z;
+/*IGUAL AO DE CIMA MAS COM DESTRUCTURING, criando vars a, b e c e sendo igual a x, y e z respectivamente*/
+        const { x:a , y:b , z:c} = voxel;
+
+        const TEMPS = 
+        {
+            hoje: 19.4,
+            amanha : 22
+        };
+////////////////////////////////////////////////////////////////////////////////////
+        function getTempsAmanha (t)
+        {
+            //const tempAmanha = undefined;
+            const {amanha:tempAmanha} = t  ;  /*usando destructuring, a função vai buscar ao t o valor de amanha e atribui À var tempAmanha*/
+            return tempAmanha;
+        }
+        console.log(getTempsAmanha(TEMPS));
+///////////////////////DESTRUCTURING COM NESTED OBJECTS /////////////////////////
+const LOCAL_TEMP = 
+{
+    hoje : {min : 11, max: 23},
+    amanha:{min : 8,  max: 17.3}
+};
+
+function getMaxAmanha (f)
+{
+    "use strict"; /*Strict mode is an important part of modern JavaScript. ... Strict mode makes several changes to JavaScript semantics. It eliminates silent errors and instead throws them so that the code won't run with errors in the code. It will also point out mistakes that prevent JavaScript engines from doing optimizations.*/
+    //const maxAmanha = undefined;
+    const { amanha : {max : maxAmanha}} = f;
+    return maxAmanha;
+}
+console.log(getMaxAmanha(LOCAL_TEMP));
+/////////////////////////////////////////////////////////////////////
+/*FUNÇÃO PARA REMOVER 2 PRIMEIROS ELEMENTOS DE UM ARRAY*/
+const fonte = [1,2,3,4,5,6,7,8,9,10];
+function remove2pri (l)
+{
+    const [, , ...arr] = l;/* [ , , ...var], cada virgula representa uma posição, ... para ir até ao fim*/
+    return arr;
+}
+const arr = remove2pri(fonte);
+console.log(fonte);
+console.log(arr);
+//////////////////////////////////////////////////////////////////////
+/*PASSAR PARAMETROS A UMA FUNÇÃO USANDO DESTRUCTURING*/
+const stats = 
+{
+    max: 36.5,
+    desvio : 4.34,
+    mediana : 34.54,
+    moda : 23.87,
+    min : -0.75,
+    media : 35.85
+};
+const half = (function()
+{
+  //  return function half(stats)
+  //  {   
+  //      return(stats.max + stats.min) / 2.0;
+  //  };PARA NAO PASSAR COMO PARAMETRO STATS INTEIRO, POSSO FAZER O DESCONSTRUCTING E PASSAR APENAS min E max de stats
+    return function half({ max, min })//  (stats) passa a { max, min}
+    {   
+        return(max + min) / 2.0;  // stats.max e stats.min fica so max e min
+    };
+})();
+console.log (stats);
+console.log (half(stats));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

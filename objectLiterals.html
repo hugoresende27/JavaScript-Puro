@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+    <script>
+        const criarPessoa = (nome, idade, sexo) => 
+        {
+            return {
+                nome: nome,
+                idade: idade,
+                sexo: sexo
+            };
+        }
+        console.log(criarPessoa("Hugo", 33, "Macho"));
+        
+/////PODE SER SUBSTITUIDO POR ISTO/////////////////vai retornar os parametros de entrada com o mesmo nome
+        const criarPessoa2 = ( n , i , s) => ({ n , i , s });
+        console.log(criarPessoa2("Resende", 31, "Macho"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
