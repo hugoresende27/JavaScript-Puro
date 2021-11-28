@@ -22,15 +22,20 @@ body
     font-family: 'Caveat',sans-serif;
     font-weight: 800;
     display: flex;          /*coloca tudo em linha*/
-    flex-direction: column; /*coloca tudo em coluna*/
-    align-items: center;    /*alinha horizontalmente*/
-    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    flex-direction: row; /*coloca tudo em coluna*/
+    /*align-items: center;    /*alinha horizontalmente*/
+    /*justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
     height: 100vh;
     overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
-    margin: 0;
-    /*overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
-    /* min-height: 100vh; */
+    margin: 2rem;
+    overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
+     min-height: 100vh; 
     color: #fff;
+}
+
+.main {
+    width: fit-content;
+    margin: 50px;
 }
 
 .nums {
@@ -41,6 +46,17 @@ body
 }
 #res{
     font-size: 40px;
+}
+#tab{
+    font-size: 35px;
+
+}
+
+/*REMOVER SETAS INPUT NUM////////////////////////*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 
