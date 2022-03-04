@@ -19,12 +19,7 @@ var arr_aninhado = [ ["🌈", "👽"]
 // console.log(arr_aninhado);
 
 
-/// MEUS APONTAMENTOS /////////////// ////////////////////////////////////
 
-
-function clica_mesa(){
-
-}
 
 /// FOREACH DOCUMENTATION //////////////// ////////////////////////////////////
 
@@ -43,6 +38,25 @@ grupoCartas.forEach(function(ele, index)
         
         // console.log(index+"->"+ele)
     });
+
+
+
+
+    
+    cartas_baralhadas();
+
+
+
+
+
+/// /////////////////////////////////// //////////////// ////////////////////////////////////
+teste =  document.querySelectorAll('.carta');
+
+teste.forEach( function (e){
+    e.addEventListener("click", descobrir);
+})
+//    console.log(teste);
+
 
 /// function  cartas baralhadas //////////////// ////////////////////////////////////
 
@@ -86,42 +100,47 @@ function distribuir_cartas(){
 
 }
 
-distribuir_cartas();
+/// function certo /////////////// //////////////// ////////////////////////////////////
+function acertar(m)
+{
+    m.forEach(function (ele){
+        ele.classList.add('sucesso'); //classe sucesso  opacity: 0; vai fazer desaparecer as cartas se forem iguais
+    })
+    console.log("CERTO");
+}
+/// function errado /////////////// //////////////// ////////////////////////////////////
+function errar(m)
+{
+    m.forEach(function (ele){
+        ele.classList.remove('descoberta'); //se cartas diferentes remove classe descoberta 
+    })
+    console.log("ERRADO")
+}
 
-/// function descobrir /////////////// //////////////// ////////////////////////////////////
-function descobrir()
-    {
-        //totalDescobertas vai buscar todas as divs com classe .descoberta
-        var totalDescobertas = document.querySelectorAll('.descoberta');
-    
-        //para apenas permitir virar 1 carta
-        if (totalDescobertas.length > 1){
-            return;     //para sair da função se comprimento maior do que 1
-        }
-
-        this.classList.add('descoberta');
-
-        //vai criar o array mostra com as 2 classes viradas
-        var mostra = document.querySelectorAll('.descoberta');
-        if (mostra.length<2){
-            return;
-        }
-
-        if(mostra[0].dataset.value === mostra[1].dataset.value){ //vai comparar se textContent(emoji) iguais se sim certo
-            console.log("ceerto");
-        } else {
-            console.log("ERRADO")
-        }
-         console.log(mostra)
-      
+function descobrir(){
+    var totalDescobertas=document.querySelectorAll(".descoberta");
+   
+    if(totalDescobertas.length>1){
+        return;
     }
+    
+    this.classList.add("descoberta");
+    
+ var mostra=document.querySelectorAll(".descoberta");
+     if(mostra.length<2){
+     return;
+     } 
+ 
+    comparar(mostra);
+ 
+ }
 
-
-teste =  document.querySelectorAll('.carta');
-
-teste.forEach( function (e){
-    e.addEventListener("click", descobrir);
-})
-   console.log(teste);
-
-
+ function comparar(mostrar){
+    
+    if(mostrar[0].dataset.value===mostrar[1].dataset.value){
+        certo(mostrar);
+        }
+        else{
+           errado(mostrar);
+        }
+}
