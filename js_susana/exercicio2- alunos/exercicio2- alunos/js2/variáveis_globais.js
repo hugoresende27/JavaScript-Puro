@@ -1,6 +1,21 @@
-var grupoCartas = ["🦄", "🍦", "🌈", "👽", "👾", "🤖", "👹", "👺" ];
+var grupoCartas = [
+"🦄", 
+"🍦",
+ "🌈", 
+ "👽", 
+ "👾", 
+ "🤖", 
+ "👹", 
+ "👺",
+ "🍇",
+ "🕴️",
+ "🙈",
+ "🐖"];
 
 var totalCartas=grupoCartas.concat(grupoCartas);
+var total = 0;
+var nivel = 1;
+
 
 /*
 Aplicar um cronometro e um contador

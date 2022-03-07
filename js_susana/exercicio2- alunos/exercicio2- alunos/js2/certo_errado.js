@@ -13,11 +13,14 @@ function errado(errar)
     {
 
         element.classList.add("erro");
+        
     });
 
     setTimeout(
         function()
         {
+            
+            document.getElementById('msg').innerHTML  ="";
             errar.forEach(function(element)
             {
                 element.classList.remove("descoberta");
@@ -25,6 +28,7 @@ function errado(errar)
             });
           
         },1500)
+
 }
 
 

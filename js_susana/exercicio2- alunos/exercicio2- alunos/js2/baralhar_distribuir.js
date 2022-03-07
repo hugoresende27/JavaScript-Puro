@@ -14,6 +14,7 @@ function DistribuirCartas()
     var baralhar=cartasBaralhadas();
     var mesa=document.querySelector("#mesa");
     mesa.innerHTML= "";
+    document.getElementById('nivel').innerHTML = nivel;
     
     baralhar.forEach(
     function (element){
