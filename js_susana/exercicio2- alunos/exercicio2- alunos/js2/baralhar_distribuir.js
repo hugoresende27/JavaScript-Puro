@@ -21,7 +21,7 @@ function DistribuirCartas()
         var carta=document.createElement("div");
         carta.innerHTML=
         "<div class='carta' data-value="+element+">"+
-                "<div class='carta__conteudo'>"+
+                "<div class='carta__conteudo' onclick='audio.play()'>"+
                 element+
             "</div>"+
             " </div>";
