@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Jogo Memória - Projeto Final</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:400,600"
+      rel="stylesheet"
+    />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="bemvindos" class="bemvindos">
+      <h1>Olá</h1>
+      <div class="bemvindos-botoes">
+        <button id="jogo-normal">Vamos Jogar</button>
+        <button id="jogo-relax">Modo relax</button>
+      </div>
+    </div>
+    <header class="cabecalho">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecalho-titulo">Movimentos</h4>
+          <div class="cabecalho-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="cronometro" class="contador-item">
+          <h4 class="cabecalho-titulo">Tempo</h4>
+          <div class="cabecalho-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="cabecalho-titulo">Nivel</h4>
+        <div class="cabecalho-num"><span id="nivel">01</span></div>
+      </div>
+      <button id="control-nivel" class="control-nivel">…</button>
+    </header>
+    <main>
+      <div id="mesa" class="mesa"></div>
+      <div id="sobeNivel" class="sobe-nivel">
+        <div class="modal">
+          <h2>Muito Bem!</h2>
+          <button id="subir">Próximo Nível</button>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>Oh não!</h2>
+          <p>Ficou sem movimentos 😭</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="timeOver" class="game-over">
+        <div class="modal">
+          <h2>Oh não!</h2>
+          <p>Ficou sem tempo 😭</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>Parabéns!</h2>
+          <p>Passou todos os níveis 🏆</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+    </main>
+    <div class="seleciona-nivel">
+      <button id="fecha-niveis" class="fecha-niveis">&times;</button>
+      <ul></ul>
+    </div>
+
+    <audio
+      src="sons/certo.mp3"
+      class="sons"
+      id="sons-certo"
+      preload="auto"
+    ></audio>
+    <audio
+      src="sons/erro.mp3"
+      class="sons"
+      id="sons-erro"
+      preload="auto"
+    ></audio>
+    <audio
+      src="sons/carta.mp3"
+      class="sons"
+      id="sons-carta"
+      preload="auto"
+    ></audio>
+
+    <script src="js/variaveis_globais.js"></script>
+    <script src="js/descobrir_comparar.js"></script>
+    <script src="js/baralhar_distribuir.js"></script>
+    <script src="js/certo_errado.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/finalizar.js"></script>
+    <script src="js/muda-nivel.js"></script>
+    <script src="js/game-over.js"></script>
+    <script src="js/menu-niveis.js"></script>
+    <script src="js/iniciar.js"></script>
+    <script src="js/comeca-jogo.js"></script>
+  </body>
+</html>
