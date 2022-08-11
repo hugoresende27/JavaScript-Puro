@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 2 Exc1</title>
+    <script>
+        /*FUNÇÃO QUE CRIA UMA NOVA STRING COM OS 3 PRIMEIROS E OS 3 ULTIMOS CHARS DE UMA STRING*/
+        const novaString = (str) => 
+        {
+            if (str.length >3)
+                return str.slice(0,3) + str.substr( str.lastIndexOf('')-3,3);
+            else
+                return str;
+        }
+        console.log(novaString("hugão resende"));
+        console.log(novaString("Emanuel Teixeira"));
+        console.log(novaString("abc"));
+////////////////////////////////////////////////////////////////////////////////////////////////
+        const makeNewString = (str) => 
+            str.length < 3 ? str : str.slice(0,3) + str.slice(-3);
+        console.log(makeNewString("Hugão Resende"));
+        console.log(makeNewString("Teixeira Emanuel"));
+        console.log(makeNewString("Teir"));
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>l

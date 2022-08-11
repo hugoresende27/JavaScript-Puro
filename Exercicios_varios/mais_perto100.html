@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais perto de 100</title>
+    <script>
+////////////////FUNÇÃO PARA ENCONTRAR O MAIS PERTO DE 100
+        const perto100 = ( x, y ) => {
+            if (Math.abs(x-100) < Math.abs(y-100))
+                return `Mais perto de 100 é ${x}`;
+            else
+                return `Mais perto de 100 é ${y}`;
+        }
+        const perto200 = ( x, y ) => Math.abs(200-x) < Math.abs(200-y) ? `Mais perto de 200 é ${x}` : `Mais perto de 200 é ${y}`;
+//////////////////////////////////////////////////////      
+        console.log(perto100(150,70));
+        console.log(perto100(101,98));
+        console.log(perto100(89,88));
+        console.log(perto100(10,1000));
+
+        console.log(perto200(250,170));
+        console.log(perto200(201,200));
+        console.log(perto200(189,188));
+        console.log(perto200(101,1000));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

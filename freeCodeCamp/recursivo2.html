@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countup Funcao</title>
+    <script>
+
+//funçaõ recursiva para criar um array de 1 até n
+        function countup(n) {       //50
+            if (n < 1) {            //50<1
+              return [];
+            } else {        
+              const countArray = countup(n - 1);    //countup(49)
+              countArray.push(n);                   //push adiciona ao fim do array
+              return countArray;
+            }
+          }
+/////////////////////////////////////////////////////////////
+//funçao recursiva criar um array de n até 1, decrescente
+          function countdown(n) {       
+            if (n < 1) {                //se o principio for menor do que 1
+              return [];                //return vazio
+            } else {        
+              const countArray = countdown(n - 1);    //principio -1
+              countArray.unshift(n);            //unshift adiciona ao principio do array              
+              return countArray;
+            }
+          }
+////////////////////////////////////////////////////////////
+        function rangeOfNumbers(startNum, endNum) {
+            if (endNum < startNum) {                //se o fim for menor do que o principio         
+                return [];                          //return vazio
+              } else {        
+                const countArray = rangeOfNumbers(startNum,(endNum-1));    //recursivo, chama a função de principio até fim -1
+                countArray.push(endNum);                                    //adiciona no fim do array 
+                return countArray;
+              }
+        };
+///////////////////////////////////////////////////////////////////
+        console.log(countup(5));
+        console.log(countup(50));
+        console.log(countdown(5));
+        console.log(countdown(50));
+        console.log(rangeOfNumbers(5,10));
+        console.log(rangeOfNumbers(50,100));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

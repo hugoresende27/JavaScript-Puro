@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos For e ForEach</title>
+    <script>
+        const alunos = [                    //ARRAY DE OBJETOS
+        {  nome:"Hugo" , num:27 , curso:"Js" , ano:1 },
+        {  nome:"Rita" , num:20 , curso:"php" , ano:6 },
+        {  nome:"Zé" , num:7 , curso:"python" , ano:4 },
+        {  nome:"pedro" , num:17 , curso:"ingles" , ano:2 },
+        {  nome:"Calos" , num:2 , curso:"c++" , ano:1 }
+        ];
+/////////////////////////   FOR     ////////////////////////////
+        for (let i=0; i<alunos.length; i++)
+        {
+           // console.log(alunos[i]);
+            console.log(alunos[i].nome);
+            console.log(alunos[i].ano);
+        }
+/////////////////////////   FOR IN    ////////////////////////////
+console.log("#########################");
+        for (let i in alunos)
+        {
+            console.log(alunos[i].curso);
+        }
+/////////////////////////   FOR OF    ////////////////////////////
+console.log("#########################");
+        for (let i of alunos)       //acede diretamente ao objeto, for of
+        {
+            console.log(i.curso);
+        }
+/////////////////////////   FOREACH    ////////////////////////////
+console.log("#########################");
+        alunos.forEach(function(a)      //função forEach
+        {
+            console.log(a.num);
+        });
+    </script>
+</head>
+<body>
+
+  
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Eventos</title>
+
+    <style>
+        p{
+            border:1px solid red;
+            padding: 20px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body onload="iniciar()">
+    <div>
+        <p onmouseover="mouseover(this)" onmouseout="mouseout(this)" onclick="mouseclick(this)">Texto 1</p>
+        <p onmouseover="mouseover(this)" onmouseout="mouseout(this)" onclick="mouseclick(this)">Texto 2</p>
+        
+   
+     
+        <button type="button" onclick="teste()">Ação</button>
+        <button type="button" onclick="this.innerHTML = 'Olá Hugo!'">Ação 2</button>
+
+        <p onclick="alterar(this)">Texto A</p>
+        <p onclick="alterar(this)">Texto B</p>
+
+        <button type="button" onclick="apresentarData()">Apresentar Data</button>
+        <p id='info'>[RESULTADO]</p>
+
+        <button id = 'botao' type="button" onclick="apresentarData()">Apresentar Data</button>
+
+
+        <button id = 'botao2' type="button" onclick="apresentarData()">Apresentar Data</button>
+        <p id='info3'>[RESULTADO]</p>
+
+
+        <script>
+            document.getElementById('botao').onclick = apresentarData;
+        </script>
+    </div>
+     
+       
+    
+   
+        
+        
+   
+
+</body>
+</html>

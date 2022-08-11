@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varios</title>
+    <script>
+        const dogs = {
+            Fido: "Mutt",
+            Hunter: "Doberman",
+            Snoopie: "Beagle"
+          };
+          
+        const myDog = "Hunter";
+        const myBreed = dogs[myDog];
+        console.log(myBreed);
+        const x="Snoopie";
+        const y = dogs[x];
+        console.log(y);
+
+        const someObj = {
+        propName: "John"
+        };
+        
+        function propPrefix(str) {
+        const s = "prop";
+        return s + str;
+        }
+        
+        const someProp = propPrefix("Name");
+        console.log(someObj[someProp]);
+
+        // Setup
+        const myArray = [];
+        let i=5;
+
+        while (i>=0)
+        {
+        myArray.push(i);
+        i--;
+        }
+        //console.log(myArray);
+////////////////////////////////////////////////
+function multiplyAll(arr) {
+    let product = 1;
+    console.log(arr.length);
+    console.log(product);
+    // Only change code below this line
+    for (let i=0; i<arr.length; i++)
+      for (let j=0; j<arr[i].length;j++)
+      {
+        
+        product *= arr[i][j];
+      }
+    // Only change code above this line
+    return product;
+    }
+////////////////////////////////////////////////////
+function sum(arr, n) {
+    // Only change code below this line
+    if (n<=0)
+      return 0;
+    else
+    {
+      return sum(arr,n-1)+arr[n-1];
+    }
+    // Only change code above this line
+  }
+  
+  
+  console.log(sum(1,5));
+  console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]]));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Sort</title>
+    <script>
+        const nomes = ["Jorge","Rui","Anabela","Bruno"];
+        const idade = [25,33,14,42];
+
+        console.log(nomes.sort());      //ordena ordem alfabética ou num
+        console.log(nomes.reverse());   //ordena inverso alfabético ou num
+        console.log(idade.sort());
+        console.log(idade.sort( (a,b) => a-b  ));
+///////////////////////////////////////////////////////////////////////////////////
+        const alunos = [                    //ARRAY DE OBJETOS
+        {  nome:"Hugo" , num:27 , curso:"Js" , ano:1 },
+        {  nome:"Rita" , num:20 , curso:"php" , ano:6 },
+        {  nome:"Zecas" , num:7 , curso:"python" , ano:4 },
+        {  nome:"pedro" , num:17 , curso:"ingles" , ano:2 },
+        {  nome:"Calos" , num:2 , curso:"c++" , ano:1 }
+        ];
+        console.log(alunos.sort( (a,b) => a.num - b.num));      //ORDENAR ARRAY TIPO NUM
+        console.log(alunos.sort( (a,b) => a.ano - b.ano));
+///////////////////////////////////////////////////////////////////////////////////
+        console.log(alunos.sort( (a,b)=>                        //FUNÇÃO PARA ORDENAR POR ABC NOME
+        {
+            let c = a.nome.toLocaleLowerCase();
+            let d = b.nome.toLocaleLowerCase();
+            if (c<d) {return -1;}
+            if (d<c) {return 1;}
+            return 0;
+        }));
+        console.log(alunos.sort( (a,b)=>                        //FUNÇÃO PARA ORDENAR POR ABC CURSO
+        {
+            let c = a.curso.toLocaleLowerCase();
+            let d = b.curso.toLocaleLowerCase();
+            if (c<d) {return -1;}
+            if (d<c) {return 1;}
+            return 0;
+        }));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

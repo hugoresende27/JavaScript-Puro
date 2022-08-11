@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exc2 Filename JS</title>
+    <script>
+///////////////////////FUNÇÃO QUE LÊ A EXTENSÃO DE UM FICHEIRO ////////////////////////
+        const getFileExt = (str) => str.slice(str.lastIndexOf('.'));
+        const getFileExt2 = (str) => str.slice(str.indexOf('.'));
+        const inclui = (str) => str.slice(str.includes('index'));
+        console.log(getFileExt("index.html"));
+        console.log(getFileExt("index.js"));
+        console.log(getFileExt("index.css.config"));
+        console.log(getFileExt2("index.css.config"));
+        console.log(inclui("css"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

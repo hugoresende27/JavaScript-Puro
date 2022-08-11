@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função teste</title>
+    <script>
+        let str = "Hugo Resende";
+        let existe = /Hugo/;
+        console.log(existe.test(str));          //true, test verifica se Hugo está presente em str
+        console.log(/Resende/.test(str));       //true, 
+        console.log(/hugo/.test(str));          //false, case sensitive
+////////////////////////////////////////////////////////
+        let myString = "Hello, World!";
+        let myRegex = /Hello/;
+        let res = myRegex.test(myString);
+        console.log(res);
+////////////////////////////////////////////////////////
+        let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+        let waldoRegex = /Waldo/; 
+        let re = waldoRegex.test(waldoIsHiding);
+////////////////////////////////////////////////////////
+        let petString = "James has a pet cat.";
+        let petRegex = /dog|cat|bird|fish/; 
+        let result = petRegex.test(petString);
+        console.log(result);
+////////////////////////////////////////////////////////
+        let myStr = "freeCodeCamp";
+        let fccRegex = /FREECODECAMP/i; // /i ignore case sensitive, flag i
+        let x = fccRegex.test(myStr);
+        console.log(x);
+    </script>
+</head>
+<body>
+    <h1>Usar F12 para abrir devtools, outputs na consola</h1>
+</body>
+</html>

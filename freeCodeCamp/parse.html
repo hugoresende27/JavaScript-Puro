@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS função converter Int to str</title>
+    <script>
+//////////////////////////////////////////////////////////////////////////////////////
+        const a = parseInt("007");
+        console.log(a);
+        function convertToInteger(str) {
+            return parseInt(str);
+        }
+    function converterInt()
+    {
+        const x = document.getElementById('inputB').value
+        document.getElementById('outputB').innerHTML = parseInt(x)
+    }
+//////////////////////////////////////////////////////////////////////////////////////
+        function convertToString(int) {
+            return int.toString(2);
+        }
+        
+        console.log(convertToInteger("56"));
+        console.log(convertToInteger("0"));
+        console.log(convertToString(a));
+        console.log(convertToString(5));
+        console.log(convertToString(0));
+    function converterStr ()
+    {
+        var x = document.getElementById('inputC').value
+        var l = x.toString(2)
+        document.getElementById('outputC').innerText = l
+    }
+//////////////////////////////////////////////////////////////////////////////////////
+        function convertToInteger2(str) {
+            return parseInt(str,2); //binary number ,2
+        }
+
+        function converterBin()
+        {
+            const x = document.getElementById('input').value 
+            document.getElementById('output').innerHTML = parseInt(x,2)
+        } 
+        console.log(convertToInteger2("10011"));
+//////////////////////////////////////////////////////////////////////////////////////
+    </script>
+</head>
+<body>
+
+    <label>Insira um numero binário: </label>
+        <input type="number" id="input">
+        <button type="button" onclick="converterBin()">Clica</button>
+    <p id="output">res</p>
+
+    <label>Insira um número: </label>
+        <input type="text" id="inputB">
+        <button type="button" onclick="converterInt()">Clica</button>
+    <p id="outputB">res</p>
+
+    <label>Insira qualquer coisa: </label>
+        <input type="text" id="inputC">
+        <button type="button" onclick="converterStr()">Clica</button>
+    <p id="outputC">res</p>
+    
+</body>
+</html>

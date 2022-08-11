@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 001</title>
+    <script>  
+            //script pode estar no head ou no body
+    
+        function teste2()
+        {
+            document.getElementById('info').innerHTML ="Mais um texto by Hugo Resende";
+        }
+        function teste3()
+        {
+            document.getElementById('info').innerHTML =" ";
+        }
+       
+    </script>
+    <script src="script.js"></script><!--carregado o ficheiro js pelo source, forma mais corrente-->
+</head>
+<body>
+    <button type="button" onclick="teste()"> clicar aqui 1 </button>      <!--ao clicar no botão vai executar a função teste() dentro do script -->
+    <button type="button" onclick="teste2()"> TEXTO 2</button>
+    <button type="button" onclick="teste3()"> APAGAR</button>
+
+    <p id="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim vitae nemo laudantium voluptas ea fugiat magni similique, nam sunt sequi odio consequatur incidunt, corrupti tempore maiores officiis et dolor?
+    </p>
+
+   <!-- Javascrip se o script tivesse em cima, aparecia o lorem porque ainda não conhecia o id info-
+   <script>    
+        document.getElementById ('info').innerHTML ="O texto de Javascript";
+    </script>
+-->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exc JS map</title>
+    <script>
+        const array = [1,2,3,4,5,6,7,8,9,10];
+        const alunos = [                    //ARRAY DE OBJETOS
+        {  nome:"Hugo" , num:2007 , curso:"Js" , ano:1 },
+        {  nome:"Rita" , num:20 , curso:"php" , ano:6 },
+        {  nome:"Zecas" , num:7001 , curso:"python" , ano:4 },
+        {  nome:"pedro" , num:17 , curso:"ingles" , ano:2 },
+        {  nome:"Calos" , num:2 , curso:"c++" , ano:1 }
+        ];
+
+        console.log(array.map(a => Math.sqrt(a)));
+        console.log(alunos.filter( a=> a.num>700 && a.num<11000));
+        console.log(array.reduce ( (x ,a) => x*a));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

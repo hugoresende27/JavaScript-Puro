@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let e var e const</title>
+    <script>
+        var numArray = [];
+        for (var i = 0; i < 3; i++) //var é declarado global
+        {
+            numArray.push(i);
+        }
+        console.log(numArray);
+        console.log(i);             //aqui i vai ter o valor 3
+///////////////////////////////////////////////////////////
+    var printNumTwo;
+    for (var i = 0; i < 3; i++) 
+    {
+        if (i === 2) 
+        {
+            printNumTwo = function() 
+            {
+                return i;
+            }
+        }
+    }
+    console.log(printNumTwo());
+///////////////////////////////////////////////////////////
+    let printNumTwoB;
+    for (let x = 0; x < 3; x++) 
+    {
+    if (x === 2) {
+        printNumTwoB = function() {
+        return x;
+        };
+    }
+    }
+    console.log(printNumTwoB());
+    //console.log(x);       //x não está declarado global
+////////////////////////////////////////////////////////////
+function checkScope() 
+{
+    let i = 'function scope';
+    if (true) 
+    {
+      let i = 'block scope';
+      console.log('Block scope i is: ', i);
+    }
+    console.log('Function scope i is: ', i);
+    return i;
+}
+checkScope();
+////////////////////////////////////////////////////////////
+const s = [5, 7, 2];
+function editInPlace() {
+  //Using s = [2, 5, 7] would be invalid
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+
+}
+editInPlace();
+console.log(s);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

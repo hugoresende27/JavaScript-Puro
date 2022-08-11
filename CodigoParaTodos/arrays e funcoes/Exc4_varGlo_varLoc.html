@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Globais e Locais</title>
+    <script>
+
+        function mostrar()
+        {
+            let a=99;               //VAR LOCAL
+            console.log(a);
+            a=20;
+        }
+
+        mostrar();
+        //let a=10;             //VAR GLOBAL
+        //console.log(a);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+        let media= 10;
+        function media1(a,b,c)
+        {
+            let media = (a+b+c)/3;
+            return media;
+        }
+        
+        console.log(media);
+        console.log(media1(15,10,12));
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function media2(a,b,c)
+        {
+            return (a+b+c)/3;
+        }
+        let varMedias = media2(12,13,19);
+        console.log(varMedias);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

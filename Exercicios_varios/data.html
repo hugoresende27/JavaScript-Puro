@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolver Data </title>
+    <script>
+//////////////////////////FUNÇÃO QUE DEVOLVE A DATA COM VARS PARA DIA MÊS E ANO
+        const tempo = Date();
+        console.log(tempo);
+///////////////////////////////////////////////////////
+        const formatoData = (date = new Date())=>
+        {
+            const dias = date.getDate();        //getDate para dia
+            const meses = date.getMonth()+1;    //+1 no mês começa com index 0
+            const anos = date.getFullYear();    //FullYear para ano
+            return `${dias}/${meses}/${anos}`;
+        }
+        console.log(formatoData());     //para devolver usar ()
+/////////////////////////////////////////////////////////
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

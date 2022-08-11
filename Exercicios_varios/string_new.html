@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio String new</title>
+    <script>
+//////////////////////////FUNÇÃO QUE ADICIONA NEW A UMA STRING
+        const nova = (str) => 
+        {   if (str.startsWith("New!"))
+            {
+                return str;
+            }
+            else
+            {
+                return str.replace(/^/,"New!");     //adiciona ao principio da str /^/
+            }
+        }
+            
+        console.log(nova("Hugo"));
+        console.log(nova("Abc"));
+        console.log(nova("New!"));
+///////////////////////////////////////////
+        const addNova = (str) => 
+            str.indexOf('New!') === 0 ? `${str}` : `New! ${str}`;       //se New! no index 0, devolve str, senão New str
+        console.log(addNova('New! Testando'));
+        console.log(addNova('New!New!New!'));
+        console.log(addNova("Mais um"));
+        console.log(addNova("New! outro"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
